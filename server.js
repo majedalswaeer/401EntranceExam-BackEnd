@@ -7,7 +7,7 @@ server.use(cors());
 server.use(express.json());
 const PORT = 3001;
 const mongolink=process.env.MONGO_LINK;
-mongoose.connect('mongodb://localhost:27017/401ExamDb', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongolink, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const itemsSchema = new mongoose.Schema({
     id:Number,
